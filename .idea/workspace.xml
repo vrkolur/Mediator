@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31a85669-efba-4f55-9ddf-ae702dfc01dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mediator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoadTraffic/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoadTraffic/Mediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RoadTraffic/RoadTrafficController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocksExample/Colleague.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocksExample/ColleagueVarun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocksExample/ColleagueVishal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocksExample/Mediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocksExample/StockMediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocksExample/StockOffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SocksExample/TestStockMediator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -32,9 +30,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN",
+      "author": "vrkolur"
+    }
+  ],
+  "lastFilter": {}
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/vrkolur/Mediator.git",
+    "accountId": "ff892478-a62f-49b7-9218-8faea412b6f5"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2jxZ4SBa7jExLIgwGGlaAY5ECGg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,12 +57,53 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.TestStockMediator.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/varunkolur/work/Web Development/Java Spring/Mediator",
     "onboarding.tips.debug.path": "/Users/vrkolur/work/Java/Mediator/src/Main.java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="SocksExample" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestStockMediator">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RoadTraffic.Main" />
+      <module name="Mediator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="RoadTraffic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStockMediator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SocksExample.TestStockMediator" />
+      <module name="Mediator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SocksExample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestStockMediator" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,5 +114,16 @@
       <updated>1722330499391</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
