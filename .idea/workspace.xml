@@ -5,19 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31a85669-efba-4f55-9ddf-ae702dfc01dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/SocksExample/Colleague.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SocksExample/ColleagueVarun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SocksExample/ColleagueVishal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SocksExample/Mediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SocksExample/StockMediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SocksExample/StockOffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SocksExample/TestStockMediator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StockExamples/Colleague.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StockExamples/ColleagueInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocksExample/Colleague.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocksExample/ColleagueVarun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocksExample/ColleagueVishal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocksExample/Mediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockExamples/Mediator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocksExample/Screenshot 2024-07-30 at 20.39.25.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockExamples/Screenshot 2024-07-30 at 20.39.25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocksExample/StockMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockExamples/StockMediator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocksExample/StockOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockExamples/StockOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SocksExample/TestStockMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StockExamples/TestStockMediator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,19 +39,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN",
-      "author": "vrkolur"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;author&quot;: &quot;vrkolur&quot;
     }
   ],
-  "lastFilter": {}
-}]]></component>
+  &quot;lastFilter&quot;: {}
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/vrkolur/Mediator.git",
-    "accountId": "ff892478-a62f-49b7-9218-8faea412b6f5"
+    "accountId": "1b455688-99f7-4d01-92f6-b209c39ad4b2"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -57,9 +66,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "Application.TestStockMediator.executor": "Debug",
+    "Application.TestStockMediator.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "ImplementColleagueInterface",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/varunkolur/work/Web Development/Java Spring/Mediator",
     "onboarding.tips.debug.path": "/Users/vrkolur/work/Java/Mediator/src/Main.java"
@@ -85,11 +94,11 @@
       </method>
     </configuration>
     <configuration name="TestStockMediator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SocksExample.TestStockMediator" />
+      <option name="MAIN_CLASS_NAME" value="StockExamples.TestStockMediator" />
       <module name="Mediator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SocksExample.*" />
+          <option name="PATTERN" value="StockExamples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
