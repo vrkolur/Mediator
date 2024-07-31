@@ -1,11 +1,11 @@
-package SocksExample;
+package StockExamples;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
 public class StockMediator implements Mediator {
 
-    private ArrayList<Colleague> colleagues;
+    private ArrayList<ColleagueInterface> colleagues;
     private ArrayList<StockOffer> stockBuyOffers;
     private ArrayList<StockOffer> stockSellOffers;
 
@@ -13,26 +13,29 @@ public class StockMediator implements Mediator {
     private int colleagueCodes = 0;
 
     public StockMediator() {
-        colleagues = new ArrayList<Colleague>();
+        colleagues = new ArrayList<ColleagueInterface>();
         stockBuyOffers = new ArrayList<StockOffer>();
         stockSellOffers = new ArrayList<StockOffer>();
     }
 
 
-    public void addColleague(Colleague newColleague) {
+    public void addColleague(ColleagueInterface newColleague) {
         colleagues.add(newColleague);
         colleagueCodes++;
         newColleague.setColleagueCode(colleagueCodes);
-
     }
 
-    public void saleOffer(String stock, int shares, int colleagueCode) {
+    public void saleOffer(String stock, int shares, int colleagueCode, String colleagueName) {
         boolean stockSold = false;
 
         for (StockOffer offer : stockBuyOffers) {
-            if ((offer.getStockShare() == shares) && (Objects.equals(offer.getStockSymbol(), stock))) {
-                System.out.println(shares + " shares of " + stock + " sold to colleague " + offer.getColleagueCode());
-                stockBuyOffers.remove(offer);
+            if ((offer.getStockShare() >= shares) && (Objects.equals(offer.getStockSymbol(), stock))) {
+                int currentStocks = offer.getStockShare();
+                int remainingStocks = currentStocks - shares;
+                offer.setStockShare(remainingStocks);
+                System.out.println(shares + " shares of " + stock + " sold to colleague " + offer.getColleagueName());
+                if(offer.getStockShare()==0)
+                    stockBuyOffers.remove(offer);
                 stockSold = true;
             }
 
@@ -42,20 +45,24 @@ public class StockMediator implements Mediator {
 
         if (!stockSold) {
             System.out.println(shares + " share of " + stock + " added to inventory");
-            StockOffer newOffering = new StockOffer(shares, stock, colleagueCode);
+            StockOffer newOffering = new StockOffer(shares, stock, colleagueCode, colleagueName );
             stockSellOffers.add(newOffering);
 
         }
 
     }
 
-    public void buyOffer(String stock, int shares, int colleagueCode) {
+    public void buyOffer(String stock, int shares, int colleagueCode, String colleagueName) {
 
         boolean stockBought = false;
         for (StockOffer offer : stockSellOffers) {
-            if ((Objects.equals(offer.getStockSymbol(), stock)) && (offer.getStockShare() == shares)) {
-                System.out.println(shares + " shares of " + stock + " has been bought by " + offer.getColleagueCode());
-                stockSellOffers.remove(offer);
+            if ((Objects.equals(offer.getStockSymbol(), stock)) && (offer.getStockShare() >= shares)) {
+                int currentStocks = offer.getStockShare();
+                int remainingStocks = currentStocks - shares;
+                offer.setStockShare(remainingStocks);
+                System.out.println(shares + " shares of " + stock + " has been bought by " + offer.getColleagueName());
+                if(offer.getStockShare()==0)
+                    stockSellOffers.remove(offer);
                 stockBought = true;
             }
             if (stockBought) {
@@ -64,10 +71,11 @@ public class StockMediator implements Mediator {
         }
         if(!stockBought){
             System.out.println(shares+ " shares of "+ stock+ " added to inventory");
-            StockOffer newOffering = new StockOffer(shares, stock, colleagueCode);
+            StockOffer newOffering = new StockOffer(shares, stock, colleagueCode, colleagueName);
             stockBuyOffers.add(newOffering);
         }
     }
+
 
     public void getStockOffering(){
         System.out.println("Stocks for sale\n");

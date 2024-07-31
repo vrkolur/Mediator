@@ -1,4 +1,4 @@
-package SocksExample;
+package StockExamples;
 
 public class StockOffer {
     private int stockShare = 0;
@@ -6,14 +6,19 @@ public class StockOffer {
     private int colleagueCode = 0;
     private String colleagueName = "";
 
-    public StockOffer(int stockShare, String stockSymbol, int colleagueCode) {
+    public StockOffer(int stockShare, String stockSymbol, int colleagueCode, String name) {
         this.stockShare = stockShare;
         this.stockSymbol = stockSymbol;
         this.colleagueCode = colleagueCode;
+        this.colleagueName = name;
     }
 
     public int getStockShare() {
         return stockShare;
+    }
+
+    public void setStockShare(int stockShare) {
+        this.stockShare = stockShare;
     }
 
     public String getStockSymbol() {
