@@ -6,6 +6,6 @@ public interface Mediator {
 
     public void buyOffer(String stock, int shares, int colleagueCode, String colleagueName);
 
-    public void addColleague(ColleagueInterface colleague);
+    public void addColleague(Colleague colleague, String name);
 
 }

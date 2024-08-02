@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class StockMediator implements Mediator {
 
-    private ArrayList<ColleagueInterface> colleagues;
+    private ArrayList<Colleague> colleagues;
     private ArrayList<StockOffer> stockBuyOffers;
     private ArrayList<StockOffer> stockSellOffers;
 
@@ -13,16 +13,16 @@ public class StockMediator implements Mediator {
     private int colleagueCodes = 0;
 
     public StockMediator() {
-        colleagues = new ArrayList<ColleagueInterface>();
+        colleagues = new ArrayList<Colleague>();
         stockBuyOffers = new ArrayList<StockOffer>();
         stockSellOffers = new ArrayList<StockOffer>();
     }
 
-
-    public void addColleague(ColleagueInterface newColleague) {
+    public void addColleague(Colleague newColleague, String name) {
         colleagues.add(newColleague);
         colleagueCodes++;
         newColleague.setColleagueCode(colleagueCodes);
+        newColleague.setColleaugename(name);
     }
 
     public void saleOffer(String stock, int shares, int colleagueCode, String colleagueName) {
@@ -77,15 +77,16 @@ public class StockMediator implements Mediator {
     }
 
 
-    public void getStockOffering(){
-        System.out.println("Stocks for sale\n");
-        for(StockOffer offer: stockSellOffers){
-            System.out.println(offer.getStockShare() +" shares of "+ offer.getStockSymbol());
-        }
 
-        for(StockOffer offer: stockBuyOffers){
-            System.out.println(offer.getStockShare()+ " shares of "+ offer.getStockSymbol());
+    public void getStockOffering(){
+        System.out.println("\nStocks for sale are:\n");
+        for(StockOffer offer: stockSellOffers) {
+            System.out.println(offer.getStockShare() + " shares of " + offer.getStockSymbol());
+
         }
+//        for(StockOffer offer: stockBuyOffers){
+//            System.out.println(offer.getStockShare()+ " shares of "+ offer.getStockSymbol());
+//        }
 
     }
 
